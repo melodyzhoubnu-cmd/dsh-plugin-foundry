@@ -1,0 +1,22 @@
+# 插件工坊（Plugin Foundry）bundle patch。
+#
+# 宿主半场只挂一行；浏览器半场通过 package.json 的 dsh.client 自动加载。
+# 所有字段都有默认值，这里只写出建议调整的项目。
+- insert:
+    - id: plugin-foundry
+      name: 'dsh-plugin-foundry'
+      config:
+        enabled: true
+        maxCards: 1
+        allowInstall: true
+        # 自动安装仍受冷启授权（默认「始终不自动安装」）和严格门禁约束。
+        autoInstall: true
+        # 目录：format-1 插件索引，6 小时缓存。
+        catalogUrl: 'https://cdn.jsdelivr.net/npm/dsh-plugin-catalog/index.json'
+        # 计量：默认纯本地；只有用户在冷启里选择「上报用量」并配置 uploadUrl 才上传。
+        uploadUrl: ''
+        # 结算口径：share（收入分成）或 rebate（token 返点）。
+        rewardMode: 'share'
+        rebateRate: 0.1
+        # 工具名 -> 插件包名。安装带 tools 声明的插件时也会自动补充。
+        toolOwners: {}

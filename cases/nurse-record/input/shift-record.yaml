@@ -1,0 +1,31 @@
+target: 内科三病区 2026-03-15 护理记录
+episode:
+  admittedAt: "2026-03-15 08:00"
+  careLevel: level-2
+  patientLabel: 样本患者甲
+records:
+  - id: REC-0001
+    kind: general
+    recordedAt: "2026-03-15 09:00"
+    nurseId: N10231
+  - id: REC-0002
+    kind: general
+    recordedAt: "2026-03-15 11:00"
+    nurseName: 李护士
+  - id: REC-0003
+    kind: general
+    recordedAt: "15/03/2026 13:00"
+    nurseId: N10232
+  - id: REC-0004
+    kind: rescue
+    recordedAt: "2026-03-16"
+    rescueEndedAt: "2026-03-15 13:50"
+    nurseId: N10231
+orders:
+  - id: ORD-1001
+    type: temporary
+    orderedAt: "2026-03-15 10:00"
+    execution: { executedAt: "2026-03-15 10:20", outcome: executed }
+assessments:
+  - kind: 跌倒坠床风险评估
+    completedAt: "2026-03-15 09:40"

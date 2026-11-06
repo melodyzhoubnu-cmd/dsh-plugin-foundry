@@ -1,0 +1,64 @@
+{
+  "name": "dsh-plugin-foundry",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melodyzhoubnu-cmd/dsh-plugin-foundry.git"
+  },
+  "homepage": "https://github.com/melodyzhoubnu-cmd/dsh-plugin-foundry#readme",
+  "bugs": {
+    "url": "https://github.com/melodyzhoubnu-cmd/dsh-plugin-foundry/issues"
+  },
+  "description": "插件工坊：对话内分发、分布式 token 计量与按用量分配的参考实现。Plugin Foundry: in-conversation distribution and attributable token metering.",
+  "type": "module",
+  "main": "src/radar/index.js",
+  "exports": {
+    ".": "./src/radar/index.js",
+    "./client": "./src/radar/client.js",
+    "./protocol": "./src/protocol/index.js",
+    "./platform": "./src/platform/server.js",
+    "./demo/seed": "./src/demo/seed.js",
+    "./package.json": "./package.json",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./locale/*.json": "./locale/*.json",
+    "./icon": "./icon.svg"
+  },
+  "files": [
+    "src",
+    "docs",
+    "locale/*.json",
+    "icon.svg",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE",
+    "scripts"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "demo": "node src/demo/run.js",
+    "demo:e2e": "node --test test/demo.test.js",
+    "status": "node scripts/foundry-status.js",
+    "reset-consent": "node scripts/reset-consent.js",
+    "map-tool": "node scripts/map-tool.js"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-client-connection",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-ui-renderer"
+      ],
+      "immediately": true
+    }
+  },
+  "engines": {
+    "dsh": ">=0.2.1-rc.5",
+    "node": ">=22"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,13 @@
+{
+  "principalDiagnosis": { "code": "I10", "name": "高血压" },
+  "otherDiagnoses": [
+    { "code": "E11.900", "name": "2型糖尿病" },
+    { "code": "E11.900", "name": "2型糖尿病（重复录入）" },
+    { "code": "H28.0*", "name": "糖尿病性白内障" },
+    { "code": "心梗", "name": "急性心肌梗死" }
+  ],
+  "principalProcedure": { "code": "360600", "name": "冠状动脉支架植入术" },
+  "otherProcedures": [],
+  "chiefComplaint": "血糖控制不佳 2 年",
+  "admissionCondition": { "I10": "4", "E11.900": "1", "H28.0*": "1" }
+}

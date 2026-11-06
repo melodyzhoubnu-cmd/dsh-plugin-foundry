@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Plugin foundry",
+    "description": "Recommends the plugin the current task needs, writes install receipts into the conversation, meters plugin-attributed tokens, and shows developer pricing and settlement."
+  }
+}

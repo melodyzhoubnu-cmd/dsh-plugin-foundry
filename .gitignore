@@ -1,0 +1,13 @@
+node_modules/
+.DS_Store
+*.log
+demo/out/
+.dev-backup/
+.coverage/
+
+# local scratch / generated artifacts, never published
+_local/
+__pycache__/
+*.pyc
+/out/
+/gen/
